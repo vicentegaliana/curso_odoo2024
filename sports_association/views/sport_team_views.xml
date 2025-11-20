@@ -52,18 +52,18 @@
                             </tree>
                         </field>                -->
                         <!-- VISTA RELACIONADA -->         
-                        <!-- <field name="player_ids" context="{
+                        <field name="player_ids" context="{
                             'tree_view_ref':'sports_association.sport_player_view_simple_tree'
                             ,'form_view_ref': 'sports_association.sport_player_view_simple_form'
-                            }"/> -->
+                            }"/>
                         <!-- VISTA EMBEBIDA EDITABLE -->
-                        <field name="player_ids" context="{'default_starter':True}">
+<!--                         <field name="player_ids" context="{'default_starter':True}">
                             <tree string="Players" editable="bottom">
                                 <field name="name"></field>
                                 <field name="age"></field>
                                 <field name="starter" widget="boolean_toggle"></field>
                             </tree>
-                        </field>
+                        </field> -->
                     </group>
                 </sheet>
             </form>
