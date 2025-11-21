@@ -111,6 +111,7 @@
                 <filter name="done" string="Done" domain="[('state', '=', 'done')]" />
                 <filter name="user" string="User" context="{'group_by':'user_id'}"/>
                 <filter name="date" string="Date" context="{'group_by':'date'}"/>
+                <filter name="clinic" string="Clinic" context="{'group_by':'clinic_id'}"/>
             </search>
         </field>
     </record>
