@@ -34,7 +34,7 @@ class SportIssue(models.Model):
     
     secuence = fields.Integer(string='Secuence', default=10)
     solution = fields.Html(string='Solution')
-    player_id = fields.Many2one('sport.player', string='player')
+    player_id = fields.Many2one('sport.player', string='Player')
 
     #Ejemplo de campo calculado no almacenado
     assigned=fields.Boolean(string='Assigned',compute='_compute_assigned',inverse='_inverse_assigned',search='_search_assigned')
