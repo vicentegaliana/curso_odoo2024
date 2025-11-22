@@ -12,7 +12,7 @@ class SaleOrder(models.Model):
     
     def create_sport_ticket(self):
         vals = {
-            'name': "Gift Ticket with your order: "+self.name,
+            'name': "gift Ticket with your order: "+self.name,
             'partner_id': self.partner_id.id,
             'sale_order_id': self.id,
         }
