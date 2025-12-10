@@ -33,7 +33,7 @@
         "wizards/sport_league_create_match.xml",
 
         # Menus (debe ir al final, después de las vistas, ya que hace referencia a los actions definidos en las vistas)
-        "views/sport_issue_menuitems.xml",
+        "views/sport_association_menuitems.xml",
 
         # Reports
         "report/sport_issue_actions_report.xml",
