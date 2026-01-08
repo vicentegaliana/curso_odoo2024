@@ -34,7 +34,7 @@
                     <button name="action_check_assistance" string="Check Assistance" type="object" class="oe_highlight"></button>
                     <!-- el context de abajo realmente no hace falta tal y como tengo yo el código, pero si tuviera 
                     un solo wizard para crear las incidencias tanto desde clínica como desde jugador, sí me sería muy útil-->
-                    <button name="%(action_sport_create_issue)d" context="{'default_clinic_id': id}" string="Create Issue" type="action" class="oe_highlight"></button>
+                    <button name="%(sports_association.action_sport_create_issue)d" context="{'default_clinic_id': id}" string="Create Issue" type="action" class="oe_highlight"></button>
                 </header>
                 <sheet>
                     <!-- smartbutton for action_open_issues_related -->
