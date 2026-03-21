@@ -5,7 +5,7 @@ class SportMatch(models.Model):
     _description = 'Sport Match'
 
     name = fields.Char(string='Name', required=True)
-    date = fields.Date(string='Date', required=True)
+    date = fields.Datetime(string='Date', required=True)
     sport_id = fields.Many2one('sport', string='Sport')
     league_id=fields.Many2one('sport.league',string='League')
     team_ids = fields.Many2many('sport.team', string='Teams')

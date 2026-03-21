@@ -4,7 +4,7 @@
     <record id="action_sport_match" model="ir.actions.act_window">
         <field name="name">Sport Match</field>
         <field name="res_model">sport.match</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
         <!-- <field name="domain">[]</field> -->
         <field name="context">{}</field>
         <field name="help" type="html">
@@ -37,7 +37,7 @@
                         <field name="date"></field>
                         <field name="sport_id"></field>
                         <field name="league_id"></field>
-                        <field name="result"></field> -->
+                        <field name="result"></field>
                         <field name="winner_id"></field>
                         <field name="team_ids" delete='False'>
                             <tree string="Teams">
@@ -47,6 +47,17 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+    <!-- Vista Calendario-->
+    <record id="sport_match_view_calendar" model="ir.ui.view">
+        <field name="name">sport.match.view.calendar</field>
+        <field name="model">sport.match</field>
+        <field name="arch" type="xml">
+            <calendar string="Matches" date_start="date">
+                <field name="name"></field>
+                <field name="sport_id"></field>
+            </calendar>
         </field>
     </record>
 </odoo>
