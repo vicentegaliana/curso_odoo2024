@@ -10,10 +10,11 @@
     "application": False,
     "installable": True,
     "depends": [
-        "sports_association","sale_management",
+        "sports_association","sale_management"
     ],
     "data": [
         "views/sport_ticket_views.xml",
         "views/sale_order_views.xml",
+        "views/product_template_views.xml",
     ],
 }
