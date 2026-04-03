@@ -42,8 +42,11 @@ class SportIssue(models.Model):
     
     #Ejemplo de Many2one: cada incidencia pertenece a una clínica (una sola)
     clinic_id=fields.Many2one('sport.clinic',string='Clinic')
-    #Ejemplo de Many2many: cada incidencia puede tener varios tags
-    tag_ids=fields.Many2many('sport.issue.tag',string='Tags')
+    
+    #Ejemplo de Many2many: cada incidencia puede tener varios tags. Configuración por defecto de la tabla intermedia
+    #tag_ids=fields.Many2many('sport.issue.tag',string='Tags')
+    #Lo anterior funciona, pero en la tutoría 5 (1:44) Nacho añade parámetros al campo Many2many, para especificar cuál debe ser el nombre de la tabla intermedia y las columnas de relación
+    tag_ids=fields.Many2many('sport.issue.tag','sport_issue_tag_rel','issue_id','tag_id',string='Tags')
 
     #Ejemplo de campo float, nos vendrá bien para poder medir en la vista pivot
     cost = fields.Float('cost')

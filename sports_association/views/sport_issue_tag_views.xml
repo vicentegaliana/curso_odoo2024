@@ -18,6 +18,7 @@
         <field name="arch" type="xml">
             <tree string="Tags">
                 <field name="name"></field>
+                <field name="issues_ids" widget="many2many_tags" options="{'color_field':'color'}"></field>
             </tree>
             <!-- Con el argumento editable la lista sería editable directamente
             , pero no encuentro forma de entrar al form de detalle-->        

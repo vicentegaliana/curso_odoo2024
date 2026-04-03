@@ -15,6 +15,7 @@
     "data": [
         "data/sport_license_data.xml",
         "data/ir_cron.xml",
+        "data/ir_sequence_data.xml",
         "security/groups.xml",
         "security/ir.model.access.csv",
         "views/sport_views.xml",

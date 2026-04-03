@@ -21,6 +21,7 @@
                 <field name="name"></field>
                 <field name="date" optional="show"></field>
                 <field name="user_id" optional="hide"></field>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field':'color'}" optional="show"></field>
                 <field name="state" widget="badge"></field>
                 <field name="cost" optional="show"></field>
                 <field name="player_id" optional="show"></field>
