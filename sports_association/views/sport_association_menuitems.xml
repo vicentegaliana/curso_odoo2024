@@ -2,6 +2,7 @@
 <odoo>
     <menuitem id="sport_association_menu" 
         name="Sport Association" 
+        web_icon="sports_association,static/description/icon.png"
         sequence="10">
 
         <menuitem 

@@ -33,6 +33,13 @@ class SportLeagueCreateMatch(models.TransientModel):
                 'result':self.result,
                 'winner_id':self.winner_id.id,
             })
+            #Que aparezca en el chatter un mensaje con la liga asociada
+            #match.message_post(body=f'Match created from league: {league.name}')
+            # , pero además quiero que la liga asociada sea un enlace a la liga. 
+            # Para eso uso message_post_with_source, que me permite usar el markup de Odoo para crear el enlace. 
+            # El subtipo lo pongo a 'mail.mt_note' para que se muestre como una nota interna en el chatter.
+            # El mensaje viene a ser "Este sport match ha sido creado de: Liga de Fútbol Amateur", y el texto creo que lo aporta mail.message_origin_link. 
+            match.message_post_with_source('mail.message_origin_link', render_values={'self':match, 'origin':self.league_id}, subtype_xmlid='mail.mt_note')
         
         return {
             'name': 'Match',
